@@ -5,6 +5,8 @@ import Pilots from "./Pilots";
 const Starship = ({ props }) => {
   const history = useHistory();
 
+  window.onload(history.push("/"));
+
   return (
     <section>
       {/* <Redirect to="/" /> */}
