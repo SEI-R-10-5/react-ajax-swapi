@@ -6,6 +6,9 @@ const Home = (props) => {
 
   useEffect(() => {
     getStartsips();
+    return () => {
+      setShips([]);
+    };
   }, []);
 
   const getStartsips = async () => {
