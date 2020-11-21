@@ -5,11 +5,8 @@ import Pilots from "./Pilots";
 const Starship = ({ props }) => {
   const history = useHistory();
 
-  window.onload(history.push("/"));
-
   return (
     <section>
-      {/* <Redirect to="/" /> */}
       <h1>{props.name}</h1>
       <div className="ship-wrapper">
         <div className="ship">
