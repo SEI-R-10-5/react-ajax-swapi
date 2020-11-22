@@ -8,12 +8,8 @@ import StarshipPage from '../components/StarshipPage'
 function Router() {
     const [starships, setStarships] = useState([])
     
-    // console.log('STATE', starships)
+    console.log('STATE', starships)
    
-
-
-
-    
     const fetchData = async () => {
         const result = await axios('https://swapi.dev/api/starships')
         setStarships(result.data.results)
@@ -23,19 +19,14 @@ function Router() {
         fetchData()
     }, [])
    
-
-  
-
-
     return (
         <main>
-            <Switch>                
+            <Switch>     
+                           
                 <Route 
-                    exact path="/"
+                    exactpath="/"
                     component={() => (<Home starships={starships}></Home>)}
                 />
-
-    
 
                 <Route 
                     path="/starship/:name" 

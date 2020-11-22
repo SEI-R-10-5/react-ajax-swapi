@@ -16,7 +16,6 @@ const Home = (starships) => {
           {shipList.map(starship => {
             let location = {
               pathname: `/starship/${starship.name}`, 
-              // pathname: `/starship`, 
               state: starship
             }
             return (

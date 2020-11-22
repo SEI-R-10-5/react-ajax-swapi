@@ -6,10 +6,6 @@
     text-align: center;
  }
 
-
-
-
-
 .box {
     display: flex;
     flex-direction: column;
@@ -27,8 +23,6 @@
     color: white;
 }
 
-
-
 .linkButton {
     border: 1px solid black;
     text-decoration: none;
@@ -43,5 +37,4 @@
 a {
     text-decoration: none;
     color: white;
-
 }
