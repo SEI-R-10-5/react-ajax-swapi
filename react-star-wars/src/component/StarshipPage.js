@@ -1,21 +1,35 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom'
 
 const StarshipPage = (props) => {
 console.log('starshippage props', props)
   let starship = props.location.state
   return (
-    <div>
+    <div className="singleship">
       <h1>
-        Starships!
+        Your Starship:
       </h1>
       <h3>
        Model: {starship.model}
-       manufacture: {starship.manufacture}
+       </h3>
+       <ul>
+       <li>
+          manufacture: {starship.manufacturer}
+       </li>
+       <li>
        max atmosphering speed: {starship.max_atmosphering_speed}
+       </li>
+       <li>
        Crew: {starship.crew}
+       </li>
+       <li>
        passengers: {starship.passengers}
-      </h3>
+       </li>
+      </ul>
+      <Link to={"/"}
+         >
+        Back
+      </Link>
     </div>
   )
 }
