@@ -3,19 +3,25 @@ import { Link } from 'react-router-dom'
 
 const Home = (props) => {
   return (
-    <div>
+    <div className="main-wrapper">
+      <main>
+      <h1> Welcome trooper, choose your ship</h1>
+      </main>
+
       {props.starships.map(starship => {
          let location = {
            pathname: '/starship',
            state: starship
          }
          return (
+           <div className="shipBox">
            <Link
              to={location}
              key={starship.name}
            >
              {starship.name}
            </Link>
+           </div>
          )
        })}
     </div>
@@ -26,7 +32,7 @@ export default Home
   // >
   // { starship.name }  
   //          </Link >
-//dot this cause same as href - saying what the link should say
+//do this cause same as href - saying what the link should say
 
 // const Home = (props) => {
 //   return (
