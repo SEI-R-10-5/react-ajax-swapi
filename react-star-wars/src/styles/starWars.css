@@ -1,0 +1,47 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+ }
+
+
+
+
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    width: 50vw;
+    height: auto;
+    margin: 10px;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    background-image: url("https://i.imgur.com/POPjRso.jpg");
+    background-size: contain;
+    color: white;
+}
+
+
+
+.linkButton {
+    border: 1px solid black;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-style: normal;
+    padding: 5px;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+
+}
