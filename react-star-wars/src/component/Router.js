@@ -34,7 +34,7 @@ const Router = () => {
   return (
     <div className="router">
       <main>
-        {loading ? (  // we set to false as per the GetShips, so its loading ships - once they are loaded we go to our switch
+        {loading ? (  // we set to false as per the GetShips, so its loading ships - once they are loaded we go to our switch with loadded ships
           <h2>
             Loading ships....  
           </h2>
