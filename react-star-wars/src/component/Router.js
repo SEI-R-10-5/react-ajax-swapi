@@ -8,6 +8,7 @@ import Axios from 'axios'
 const Router = () => {
 
   const [starship, setStarship] = useState([])
+  const [loading, setLoading] = useState(true) // added for loading
 
   const GetShips = async () => { //created function to call api
     try{
@@ -17,6 +18,8 @@ const Router = () => {
     console.log('data api name', data.data)
     console.log('results', data.data.results)
     console.log('results name', data.data.results[0].name) //here we get the first name CR90 corvette
+    setLoading(false) //set to false as here we do the async call - at the useEffect we invoke
+    console.log('setloading in getShips', setLoading)
     }catch (error){
       throw error
     }
@@ -24,12 +27,18 @@ const Router = () => {
 
   useEffect(() => { //invoking api call and render
     GetShips()
+    console.log('useffect loading', setLoading)
   }, [setStarship]);//observable would go between the [] - //do not ENTER starship, it will render infinte loop
   console.log("get ships")
 
   return (
     <div className="router">
       <main>
+        {loading ? (  // we set to false as per the GetShips, so its loading ships - once they are loaded we go to our switch
+          <h2>
+            Loading ships....  
+          </h2>
+        ) : (
         <Switch>
           <Route
             exact path="/"
@@ -40,6 +49,7 @@ const Router = () => {
             render={(props) => (<StarshipPage location={props.location} />)} //rendering starshipPage component - this so details of ship can be shown
           />
         </Switch>
+        )}
       </main>
     </div>
   )
