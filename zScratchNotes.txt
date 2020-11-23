@@ -1,0 +1,50 @@
+import BrowserRouter into index and wrap it around App
+
+
+ROUTER .JS
+    will use useEffect and useState to work
+    we'll make an Axios call to SWAPI with useEffect to get all Starships
+    make a useState variable for Starships at top of Router
+            set its state within the useEffect to All Starships
+    Make a Switch that has two routes
+                        exact path "/" for HomePage
+                            also gets a prop of starships
+                        path "/starships" 
+                            renders StarshipPage component
+                                utilizes props.location to render a single starships
+                                render={(props) => 
+                                    <StarshipPage location=props.location}
+                                    />}
+
+HOME.JS
+    "/" route renders Home component (/src/pages/Home.js)
+    Should have clickable links for every starship in the starship state
+    Each link should have a location defined by the current state of the starships state
+
+    {props.starships.map(starship => {
+        let location = {
+            pathname: '/starship',
+            state: starship
+        }
+        return (
+            <Link
+                to={location}
+                key={starship.name}
+            >
+                {starship.name}
+            </Link>
+        )
+    })}
+    
+If there are no starships it should display that it's "Loading..."
+    toss that big fucker in a ternary in the render and call it a day
+
+
+STARSHIP.JS
+    When a <Link> is clicked on the Home.js page, a <StarshipPage> component should be
+        rendered, displaying the starship's
+            name
+            model
+            <Link> Return to Starship List </Link> ----> back to Home.js
+
+        
