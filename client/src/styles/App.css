@@ -1,0 +1,22 @@
+/* 
+html, body {
+    background-color: black;
+} */
+
+.app {
+    width: 100%;
+    min-width: 650px;
+    background-color: black;
+    /* height: 98vh; */
+
+}
+
+
+
+/* .componentTwoWrapper {
+    margin-top: 50px;
+    background-color: lightcyan;
+    color: black;
+    padding: 10px;
+} */
+

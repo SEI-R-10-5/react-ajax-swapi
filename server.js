@@ -20,6 +20,9 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use('/', apiProxy)
+app.use('/?page=2', apiProxy)
+app.use('/?page=3', apiProxy)
+app.use('/?page=4', apiProxy)
 app.listen(PORT, async () => {
   try {
     console.log(`App listening on port: ${PORT}`)
