@@ -1,0 +1,45 @@
+body {
+    border:2px solid red;
+    height:430px;
+    background-image:url(https://images.pexels.com/photos/3279307/pexels-photo-3279307.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) ;
+    background-size: cover;
+    background-position: 
+}
+
+h1 {
+    color:white;
+}
+
+.header-container{
+    text-align: center;
+}
+
+.link-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    text-align: center;
+    margin: 0px 15px;
+}
+
+.link {
+    height:50px;
+    color:white;
+    
+   
+    
+}
+
+a {
+    color:white;
+}
+
+.starship-name {
+    border: 2px solid black;
+    background-color: rgba(255,0,0,0.55);
+    color:white;
+    
+}
+
+.starship-name:hover {
+    color: black;
+}
