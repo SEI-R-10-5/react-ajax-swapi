@@ -1,0 +1,24 @@
+body {
+    margin: none;
+
+}
+.home-container{
+    background-color: rgb(62, 62, 62);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    column-gap: 2em;
+    row-gap: 2em;
+    height: 36em;
+}
+.ship-containers {
+    height: 5em;
+    border: 2px solid red;
+    background-color: black;
+    margin: 1em;
+    text-align: center;
+}
+a {
+    color:white;
+    text-decoration: none;
+}

@@ -1,0 +1,15 @@
+.info-container {
+    background-color: rgb(62, 62, 62);
+    height: 36em;
+    margin: 0 px;
+    display: flex;
+}
+
+.info-card {
+    border: 2px solid red;
+    background-color: rgb(112, 104, 104);
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    margin-left: 35%;
+}
