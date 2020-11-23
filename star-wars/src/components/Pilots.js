@@ -3,14 +3,13 @@ import Axios from 'axios'
 
 const Pilots = (props) => {
     const [allPilots, setPilots] = useState([])
-    let thePilots = []
 
-    useEffect(() => {
-        props.pilots.forEach(async (pilot) => {
+    useEffect(async () => {
+        const pilots = await Promise.all(props.pilots.map(async (pilot) => {
             const res = await Axios.get(pilot)
-            thePilots.push(res.data.name)
-            setPilots(thePilots)
-        })
+            return res.data.name
+        }))
+        setPilots(pilots)
     }, [])
 
     return (
