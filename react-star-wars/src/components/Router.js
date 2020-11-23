@@ -12,8 +12,11 @@ import StarshipPage from '../pages/StarshipPage'
 
 const Router = () => {
         const SWAPI = `https://swapi.dev/api/starships`
-        const [starships, currentStarship] = useState(null)
-        const 
+        const [starship, setStarship] = useState(null)
+
+        useEffect(()=>{
+                console.log(`Your starship is the ${starship}`)
+        })
 
         const chooseStarship = () => {
                 //need to make it so that it calls axios and picks the starship from the axios call
