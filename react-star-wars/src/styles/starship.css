@@ -1,0 +1,35 @@
+.whole-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.info-container {
+  
+    text-align: center;
+    border: 2px solid white;
+    width:150px;
+    height:175px;
+    background-color: rgba(255,0,0,0.7);
+   
+}
+
+span {
+    color:black;
+}
+
+.name {
+    color:white;
+}
+
+.model {
+    color:white;
+}
+
+.return a {
+    color: white;
+}
+
+a:hover {
+    color: black;
+}
