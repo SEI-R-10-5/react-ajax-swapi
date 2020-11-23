@@ -4,6 +4,14 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    background-image: url("https://i.imgur.com/GFZQsvc.jpg");
+    background-size: cover;
+    height: 1000px;
+
+ }
+
+ h1{
+     color:white;
  }
 
 .box {
@@ -37,4 +45,8 @@
 a {
     text-decoration: none;
     color: white;
+}
+
+a.linkButton {
+    background-color: black;
 }

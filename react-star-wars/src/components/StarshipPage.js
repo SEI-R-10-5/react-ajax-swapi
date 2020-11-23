@@ -24,3 +24,5 @@ const StarshipPage = (props) => {
   return <h1>LOADING</h1>
 }
 export default StarshipPage
+
+

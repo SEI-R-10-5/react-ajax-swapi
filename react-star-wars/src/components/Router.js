@@ -24,8 +24,9 @@ function Router() {
             <Switch>     
                            
                 <Route 
-                    exactpath="/"
+                    exact path="/"
                     component={() => (<Home starships={starships}></Home>)}
+                    //props is being defined as state, starships=starships
                 />
 
                 <Route 

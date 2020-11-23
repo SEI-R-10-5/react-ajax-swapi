@@ -6,6 +6,7 @@ import '../styles/starWars.css'
 const Home = (starships) => {
     // console.log('HOME', starships)
     let shipList = starships.starships
+    //props was previously named starships on router.js
     console.log(shipList)
 
   if (starships.starships) {
@@ -39,3 +40,6 @@ const Home = (starships) => {
 }
 
 export default Home
+
+
+
