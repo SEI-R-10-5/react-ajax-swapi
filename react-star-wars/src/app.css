@@ -1,0 +1,16 @@
+.image {
+    background-image: url(http://galacticempiredatabank.com/CR90Corvette.jpg)
+}
+
+div.allShipDiv {
+    text-align: center; 
+    padding: 20px; 
+    margin: 20px;
+}
+
+a.allShips {
+    margin: 50px;
+}
+
+    /* * {border: red 2px solid;
+}  */
