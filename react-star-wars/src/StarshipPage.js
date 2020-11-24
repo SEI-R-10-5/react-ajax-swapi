@@ -12,6 +12,8 @@ const Starship = (props) => {
                 <p>{starship.model}</p>
                 <p>{starship.cargo_capacity}</p>
                 <p>{starship.cost_in_credits}</p>
+                <p>{starship.crew}</p>
+                <p>{starship.pilots}</p>
                 <Link to = '/'>
                     <h3>return</h3>
                 </Link>
