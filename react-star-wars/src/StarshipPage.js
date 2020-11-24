@@ -9,10 +9,10 @@ const Starship = (props) => {
             <h1>Starships</h1>
             <div>
                 <h3>{starship.name}</h3>
-                <p>{starship.model}</p>
-                <p>{starship.cargo_capacity}</p>
-                <p>{starship.cost_in_credits}</p>
-                <p>{starship.crew}</p>
+                <p>Model: {starship.model}</p>
+                <p>Cargo Capacity: {starship.cargo_capacity}</p>
+                <p>Cost in Credits: {starship.cost_in_credits}</p>
+                <p>Crew: {starship.crew}</p>
                 <p>{starship.pilots}</p>
                 <Link to = '/'>
                     <h3>return</h3>
