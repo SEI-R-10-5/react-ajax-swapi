@@ -12,10 +12,16 @@ import StarshipPage from '../pages/StarshipPage'
 
 const Router = () => {
         const SWAPI = `https://swapi.dev/api/starships`
-        const [starship, setStarship] = useState(null)
+        const [starship, setStarship] = useState([])
+        const getDemShips = async () => {
+                const ships = await axios(`${SWAPI}`)
+                console.log(`theses ships.`,ships)
+                // ships.forEach(ship)
+
+        }
 
         useEffect(()=>{
-                console.log(`Your starship is the ${starship}`)
+                getDemShips()
         })
 
         const chooseStarship = () => {
@@ -34,12 +40,15 @@ const Router = () => {
                                 />
                                 <Route
                                     path="/starships"
-                                    component={(props)=> (
-                                            <StarshipPage {...props}/>
-                                    )}
+                                    render={(props)=> 
+                                            <StarshipPage location={props.location}
+                                            />
+                                        }  
                                 />
                                 
                         </Switch>
                 </div>
         )
 }
+
+export default Router
