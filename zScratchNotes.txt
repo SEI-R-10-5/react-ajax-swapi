@@ -47,4 +47,15 @@ STARSHIP.JS
             model
             <Link> Return to Starship List </Link> ----> back to Home.js
 
-        
+
+
+
+
+
+
+Router          this sets up the whole shebang... routes, axios call, state
+|
+|
+|___Home        first page being rendered, where the user lands--- router isn't rendered so it's the landing page to display all starships
+        |    
+        |_____Starship Page               this is to show off each starship and get it lookin all stylish an shiiiiiiiiid

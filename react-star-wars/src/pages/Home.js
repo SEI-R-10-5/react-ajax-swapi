@@ -1,30 +1,25 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
-
-const Home = () => {
-    
-
-    <div>{props.starships.map(starship=> {
-        let location= {
-            pathname: './starship',
-            state: starship
-        }
-        
-    })}
-    </div>
-
-return (
-    <Link 
-    to={location}
-    key={starship.name}
-    
-    >
-            {starship.name}
+const Home = (props) => {
+    return (
+    <div>
+        <div>
+            {props.starship.map((starship) => (
+            
+                <Link 
+                to={{pathname:'/starship', state: starship}}
+                key={starship.name}   
+                >
+        {starship.name}
         </Link>
-    
+            ))
+    }
+        </div>
+    </div>
     )
 }
-
+export default Home
 
 // props.starships.length ? (
 //     //all the starship rendering stuff

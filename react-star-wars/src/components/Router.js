@@ -2,21 +2,26 @@
 // we'll make an Axios call to SWAPI with useEffect to get all Starships
 // make a useState variable for Starships at top of Router
         //set its state within the useEffect
-
 import axios from 'axios'
-import React from 'react'
-
+import React, {useState, useEffect} from 'react'
 import Home from '../pages/Home'
 import StarshipPage from '../pages/StarshipPage'
+import {Switch, Route} from 'react-router-dom'
 
 
 const Router = () => {
         const SWAPI = `https://swapi.dev/api/starships`
-        const [starship, setStarship] = useState([])
-        const getDemShips = async () => {
-                const ships = await axios(`${SWAPI}`)
-                console.log(`theses ships.`,ships)
-                // ships.forEach(ship)
+        let [starship, setStarship] = useState([])
+        let getDemShips = async () => {
+                const ships = await axios.get(SWAPI)
+                console.log('FRONTEND: Router.js, SWAPI data', ships)
+                // try{
+                //         ships.forEach(ship) => {
+                //                 console.log(ship)
+                //         }
+
+                // } catch(error){throw error}
+                
 
         }
 
@@ -35,7 +40,9 @@ const Router = () => {
                                 <Route
                                     exact path="/"
                                     component={(props)=> (
-                                            <Home {...props}/>
+                                            <Home {...props}
+                                                starship={starship}
+                                            />
                                     )}
                                 />
                                 <Route
