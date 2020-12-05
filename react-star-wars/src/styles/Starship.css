@@ -1,0 +1,36 @@
+.home {
+  text-align: center;
+  background-image: url("https://images.unsplash.com/photo-1528746966523-1fc12935916e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1950&q=80");
+  height: 100vh;
+}
+
+h1 {
+  font-size: 70px;
+  margin-top: 0;
+  color: white;
+  text-decoration: underline;
+  text-shadow: 2px 2px magenta;
+}
+.shiplinks {
+  font-size: 47px;
+  color: magenta;
+  text-shadow: 2px 2px white;
+  margin: 10px;
+  padding: 5px 5px 5px 0;
+  text-decoration: none;
+}
+
+.ships {
+  text-align: center;
+  background-image: url("https://images.unsplash.com/photo-1528746966523-1fc12935916e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1950&q=80");
+  height: 100%;
+  margin-bottom: 0;
+  font-size: 45px;
+  color: magenta;
+  text-shadow: 2px 2px white;
+}
+
+.return {
+  font-style: italic;
+  color: magenta;
+}
