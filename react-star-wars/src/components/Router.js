@@ -14,26 +14,13 @@ const Router = () => {
         let [starship, setStarship] = useState([])
         let getDemShips = async () => {
                 const ships = await axios.get(SWAPI)
-                console.log('FRONTEND: Router.js, SWAPI data', ships)
-                // try{
-                //         ships.forEach(ship) => {
-                //                 console.log(ship)
-                //         }
-
-                // } catch(error){throw error}
-                
-
+                console.log('FRONTEND: Router.js, SWAPI data', ships.data.results)
+                setStarship(ships.data.results)
         }
 
         useEffect(()=>{
                 getDemShips()
         })
-
-        const chooseStarship = () => {
-                //need to make it so that it calls axios and picks the starship from the axios call
-                //then pass that into the return
-        }
-
         return (
                 <div>
                         <Switch>
@@ -46,11 +33,8 @@ const Router = () => {
                                     )}
                                 />
                                 <Route
-                                    path="/starships"
-                                    render={(props)=> 
-                                            <StarshipPage location={props.location}
-                                            />
-                                        }  
+                                    path="/starship"
+                                    component = {StarshipPage}
                                 />
                                 
                         </Switch>
