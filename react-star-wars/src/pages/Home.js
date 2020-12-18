@@ -6,14 +6,18 @@ const Home = (props) => {
     <div>
         <div>
             {props.starship.map((starship) => (
-            
-                <Link 
-                to={{pathname:'/starship', state: starship}}
-                key={starship.name}   
-                >
-        {starship.name}
-        </Link>
-            ))
+            <ul>
+
+                <li>
+                    <Link 
+                    to={{pathname:'/starship', state: starship}}
+                    key={starship.name}   
+                    >
+                    {starship.name}
+                    </Link>
+                </li>
+            </ul>
+        ))
     }
         </div>
     </div>
