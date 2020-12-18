@@ -1,14 +1,23 @@
 import React, { useEffect, useState } from 'react'
 import { Switch, Route } from 'react-router-dom'
 import Axios from 'axios'
+import StarshipPage from './StarshipPage'
+import Home from './Home'
 
 const Router = (props) => {
 
-    const [starships, setStarship] = useSstate([])
+    const [starships, setStarship] = useState([])
 
+    const getStarship = async () => {
+        try {
+            let res = await Axios.get('https://swapi.dev/api/starships')
+            setStarship(res.data.results)
+        } catch (error) {
+            throw error
+        }
+    }
     useEffect(() => {
-        let res = await Axios.get('https://swapi.dev/api/starships')
-        setStarship(res.data.results)
+        getStarship()
     }, [])
 
     return (
@@ -23,3 +32,5 @@ const Router = (props) => {
         </div>
     )
 }
+
+export default Router
