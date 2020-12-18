@@ -13,7 +13,7 @@ const Pilots = (props) => {
     }, [])
 
     return (
-        <div className='card'>
+        <div >
             <p>Pilots:</p>
             <ul>
                 {allPilots.map((pilot) => (

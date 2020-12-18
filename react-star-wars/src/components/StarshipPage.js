@@ -9,15 +9,15 @@ const StarshipPage = (props) => {
         <div>
             {starship ? (
                 <div>
-                    <div className='card info'>
-                        <div className='name'>
+                    <div>
+                        <div>
                             <p>Name: {starship.name}</p>
                         </div>
-                        <div className='model'>
+                        <div>
                             <p>Model: {starship.model}</p>
                         </div>
-                        <div className='return'>
-                            <Link className='link' to='/'>Return</Link>
+                        <div>
+                            <Link to='/'>Return</Link>
                         </div>
                     </div>
                     <Pilots pilots={starship.pilots} />
