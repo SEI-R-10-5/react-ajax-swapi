@@ -1,4 +1,6 @@
 import React from 'react'
+import Home from './Home'
+import {Link} from 'react-router-dom'
 
 const starshipPage = (props) => {
     
@@ -8,14 +10,17 @@ const starshipPage = (props) => {
         return ( starship ? (
             <div>
                 <h1>
-                {starship.name}
+                    {starship.name}
                 </h1>
                 <h3>
-                {starship.model}
+                    {starship.model}
                 </h3>
                 <h3>
-                {starship.starship_class}
+                    {starship.starship_class}
                 </h3>
+                <Link to='/'>
+                    <button>Back to home</button>
+                </Link>
             </div>
         ) : (
             <h1>...loading</h1>
