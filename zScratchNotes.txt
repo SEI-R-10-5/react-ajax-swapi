@@ -1,6 +1,9 @@
 import BrowserRouter into index and wrap it around App
 
 
+
+RETURN STARSHIP NAME AND MODEL AND A BACK TO HOME
+
 ROUTER .JS
     will use useEffect and useState to work
     we'll make an Axios call to SWAPI with useEffect to get all Starships
