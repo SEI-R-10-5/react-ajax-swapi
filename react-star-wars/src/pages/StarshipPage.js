@@ -2,7 +2,6 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 
 const StarshipPage = (props) => {
-    console.log(`FRONTEND: StarshipPage: props.state.name`, props.location.state)
     return (
         <div>
             <div>

@@ -11,7 +11,7 @@ const Home = (props) => {
                 <li>
                     <Link 
                     to={{pathname:'/starship', state: starship}}
-                    key={starship.name}   
+                    key={starship.id}   
                     >
                     {starship.name}
                     </Link>

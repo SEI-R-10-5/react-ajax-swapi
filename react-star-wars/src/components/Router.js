@@ -14,13 +14,13 @@ const Router = () => {
         let [starship, setStarship] = useState([])
         let getDemShips = async () => {
                 const ships = await axios.get(SWAPI)
-                console.log('FRONTEND: Router.js, SWAPI data', ships.data.results)
+                console.log(ships)
                 setStarship(ships.data.results)
         }
 
         useEffect(()=>{
                 getDemShips()
-        })
+        },[])
         return (
                 <div>
                         <Switch>
